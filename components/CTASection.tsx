@@ -9,6 +9,8 @@ export default function CTASection() {
       </p>
       <a
         href={CROWDWORKS_PROFILE_URL}
+        target="_blank"
+        rel="noopener noreferrer"
         className="mt-6 inline-block rounded bg-accent-indigo px-6 py-3 font-semibold text-base-white"
       >
         クラウドワークスのプロフィールを見る
