@@ -1,0 +1,17 @@
+import { describe, it, expect } from 'vitest';
+import { render, screen } from '@testing-library/react';
+import CTASection from '@/components/CTASection';
+import { CROWDWORKS_PROFILE_URL } from '@/lib/config';
+
+describe('CTASection', () => {
+  it('renders a link to the configured CrowdWorks profile URL', () => {
+    render(<CTASection />);
+    const link = screen.getByRole('link', { name: 'クラウドワークスのプロフィールを見る' });
+    expect(link).toHaveAttribute('href', CROWDWORKS_PROFILE_URL);
+  });
+
+  it('has an id for header navigation to link to', () => {
+    const { container } = render(<CTASection />);
+    expect(container.querySelector('#contact')).not.toBeNull();
+  });
+});
