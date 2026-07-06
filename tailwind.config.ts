@@ -13,6 +13,17 @@ const config: Config = {
         accent: {
           indigo: '#2F3E63',
         },
+        surface: {
+          tint: '#EEF1F7',
+        },
+        line: {
+          hairline: '#D8DCE3',
+        },
+      },
+      fontFamily: {
+        display: ['var(--font-display)', 'serif'],
+        body: ['var(--font-body)', 'sans-serif'],
+        mono: ['var(--font-mono)', 'monospace'],
       },
     },
   },

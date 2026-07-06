@@ -3,10 +3,14 @@ import { render, screen } from '@testing-library/react';
 import Hero from '@/components/Hero';
 
 describe('Hero', () => {
-  it('renders the main headline', () => {
+  it('renders the full headline across three deliberate lines with no content lost', () => {
     render(<Hero />);
-    expect(
-      screen.getByText('小さな会社・お店のホームページを、AIの力でスピーディーに。')
-    ).toBeInTheDocument();
+    const heading = screen.getByRole('heading', { level: 1 });
+    expect(heading.textContent).toBe(
+      '小さな会社・お店のホームページを、AIの力でスピーディーに。'
+    );
+    expect(screen.getByText('小さな会社・お店の')).toBeInTheDocument();
+    expect(screen.getByText('ホームページを、')).toBeInTheDocument();
+    expect(screen.getByText('AIの力でスピーディーに。')).toBeInTheDocument();
   });
 });

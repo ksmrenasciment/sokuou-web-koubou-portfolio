@@ -6,3 +6,23 @@ body {
   color: #1a1a1a;
   background-color: #ffffff;
 }
+
+::selection {
+  background-color: #2f3e63;
+  color: #ffffff;
+}
+
+:focus-visible {
+  outline: 2px solid #2f3e63;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

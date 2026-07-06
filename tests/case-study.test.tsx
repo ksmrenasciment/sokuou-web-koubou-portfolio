@@ -23,4 +23,11 @@ describe('CaseStudy', () => {
     render(<CaseStudy work={work} />);
     expect(screen.getByText(work.solution)).toBeInTheDocument();
   });
+
+  it('embeds a mockup preview pointing at the matching mockup route', () => {
+    const work = getWorkBySlug('construction-company')!;
+    render(<CaseStudy work={work} />);
+    const iframe = screen.getByTitle(`${work.title}のモックアッププレビュー`);
+    expect(iframe).toHaveAttribute('src', `/mockups/${work.slug}/`);
+  });
 });

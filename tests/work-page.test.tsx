@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { generateStaticParams } from '@/app/works/[slug]/page';
+import { generateStaticParams } from '@/app/(site)/works/[slug]/page';
 import { getAllWorks } from '@/lib/works';
 
 describe('generateStaticParams', () => {
