@@ -1183,13 +1183,13 @@ Expected: ビルドが成功する
 Run:
 ```bash
 ls out/index.html
-ls out/works/day-service-corporate/index.html
-ls out/works/cafe-wordpress/index.html
-ls out/works/seminar-landing-page/index.html
-ls out/works/university-department/index.html
-ls out/works/construction-company/index.html
+ls out/works/day-service-corporate.html
+ls out/works/cafe-wordpress.html
+ls out/works/seminar-landing-page.html
+ls out/works/university-department.html
+ls out/works/construction-company.html
 ```
-Expected: 6ファイルすべてが存在する
+Expected: 6ファイルすべてが存在する（Next.jsの`output: 'export'`はデフォルトで`<slug>/index.html`ではなく`<slug>.html`のフラットなファイルを生成する。これはVercelなどの静的ホスティングでクリーンURL（`/works/<slug>`）として正しく配信される標準的な出力形式であり、`next.config.mjs`に`trailingSlash`等の追加設定は不要）
 
 - [ ] **Step 4: README.md を作成**
 
