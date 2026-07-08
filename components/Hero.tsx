@@ -10,7 +10,7 @@ export default function Hero() {
         <p className="font-mono text-xs font-medium uppercase tracking-[0.3em] text-accent-indigo">
           Web Production
         </p>
-        <h1 className="mt-6 text-balance font-display text-4xl font-semibold leading-[1.45] text-base-charcoal sm:text-5xl">
+        <h1 className="mt-6 text-balance font-display text-2xl font-semibold leading-[1.45] text-base-charcoal sm:text-4xl lg:text-5xl">
           <span className="block">小さな会社・お店の</span>
           <span className="block">ホームページを、</span>
           <span className="block text-accent-indigo">AIの力でスピーディーに。</span>
